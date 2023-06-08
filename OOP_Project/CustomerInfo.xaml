@@ -1,0 +1,50 @@
+﻿<Window x:Class="OOP_Project.CustomerInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOP_Project"
+        mc:Ignorable="d"
+        Title="Customer Info" Height="371" Width="686" Loaded="Window_Loaded"  WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,1">
+        <GroupBox Header="Personal Info" HorizontalAlignment="Left" Height="193" Margin="9,12,0,0" VerticalAlignment="Top" Width="359">
+        </GroupBox>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="22,65,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtName" Text="Geo Banico" HorizontalAlignment="Left" Height="24" Margin="69,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Age:" HorizontalAlignment="Left" Margin="32,115,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtAge" HorizontalAlignment="Left" Height="24" Margin="69,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="24" IsEnabled="False"/>
+        <Label Content="Birthday:" HorizontalAlignment="Left" Margin="215,66,0,0" VerticalAlignment="Top"/>
+        <DatePicker Name="dpBday" Text="22/12/2000" HorizontalAlignment="Left" Margin="274,65,0,0" VerticalAlignment="Top" Width="81" CalendarClosed="dpBday_CalendarClosed" RenderTransformOrigin="0.5,0.5">
+            <DatePicker.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.301"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DatePicker.RenderTransform>
+        </DatePicker>
+        <GroupBox Header="Contact Info" HorizontalAlignment="Left" Height="116" Margin="10,210,0,0" VerticalAlignment="Top" Width="359"/>
+        <Label Content="Contact Number:" HorizontalAlignment="Left" Margin="62,264,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtCno" Text="09228368913" HorizontalAlignment="Left" Height="23" Margin="166,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="txtCno_PreviewTextInput"/>
+        <Label Content="Contact Person:" HorizontalAlignment="Left" Margin="70,291,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtCnoPer" Text="Alan Banico" HorizontalAlignment="Left" Height="23" Margin="166,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Address:" HorizontalAlignment="Left" Margin="112,115,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtAddress" Text ="Davao City" HorizontalAlignment="Left" Height="24" Margin="170,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185"/>
+        <Button Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="487,271,0,0" VerticalAlignment="Top" Width="75" Click="btnSave_Click"/>
+        <GroupBox Margin="374,12,0,0" Header="Payment Info" HorizontalAlignment="Left" VerticalAlignment="Top" Height="211" Width="290"/>
+        <Label Content="Presented ID:" HorizontalAlignment="Left" Margin="24,160,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox Name="txtpID" Text="0123456789" Width="83" Height="23" Margin="106,161,0,0" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Name="txtAmnt" Text="1000" HorizontalAlignment="Left" Height="23" Margin="518,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" PreviewTextInput="txtAmnt_PreviewTextInput"/>
+        <Label Content="Amount Borrowed:" HorizontalAlignment="Left" Margin="406,97,0,0" VerticalAlignment="Top"/>
+        <Label Content="Monthly Interest Rate:" HorizontalAlignment="Left" Margin="388,134,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtpercent" Text="10" HorizontalAlignment="Left" Height="23" Margin="518,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28" PreviewTextInput="txtpercent_PreviewTextInput"/>
+        <Label Content="Loan Date:" HorizontalAlignment="Left" Margin="450,171,0,0" VerticalAlignment="Top"/>
+        <DatePicker Name="dpLoanDate" Text="25/01/2020" HorizontalAlignment="Left" Margin="518,170,0,0" VerticalAlignment="Top" Width="83"/>
+        <Button Name ="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="578,271,0,0" VerticalAlignment="Top" Width="75" Click="btnClear_Click"/>
+        <Button Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="395,271,0,0" VerticalAlignment="Top" Width="75" Click="btnBack_Click"/>
+        <Label Content="Label" VerticalAlignment="Top" Name="lblAccID" Width="126" Margin="518,65,36,0"/>
+        <Label Content="Pin Number:" HorizontalAlignment="Left" Margin="440,65,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

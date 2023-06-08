@@ -1,0 +1,38 @@
+﻿<Window x:Class="OOP_Project.MainForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOP_Project"
+        mc:Ignorable="d"
+        Title="MainForm" Height="425" Width="1044"  WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="337*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="298" Margin="45,41,0,0" Stroke="Black" VerticalAlignment="Top" Width="124" Grid.ColumnSpan="2"/>
+        <ListView Name="lstbrw" HorizontalAlignment="Left" Height="311" VerticalAlignment="Top" Width="614" Margin="45,61,0,0" Grid.Column="1" SelectionChanged="lstbrw_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Name}">Name</GridViewColumn>
+                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding AccountID}">PIN#</GridViewColumn>
+                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Amnt}">Amount</GridViewColumn>
+                    <GridViewColumn Width="150" DisplayMemberBinding="{Binding Loan_Date}">Loan Date</GridViewColumn>
+                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Percentage}">Interest (%)</GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="67,64,0,0" VerticalAlignment="Top" Width="80" Click="btnAdd_Click"/>
+        <Button Name="btnEdit" Content="View" HorizontalAlignment="Left" Margin="67,123,0,0" VerticalAlignment="Top" Width="80" IsEnabled="False" Click="btnEdit_Click"/>
+        <Button Name="btnDelete" Content="Delete" Margin="67,181,0,0" VerticalAlignment="Top" IsEnabled="False" Click="btnDelete_Click" HorizontalAlignment="Left" Width="80"/>
+        <Button Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="67,288,0,0" VerticalAlignment="Top" Width="80" Click="btnQuit_Click" Background="#FF673AB7"/>
+        <Button Name="btnPay" Content="Pay" HorizontalAlignment="Left" Margin="735,191,0,0" VerticalAlignment="Top" Width="80" Click="btnPay_Click" IsEnabled="False" Grid.Column="1"/>
+        <TextBox Name="txtSearch" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="99,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" TextChanged="TxtSearch_TextChanged_1"/>
+        <Button Name ="btnArchive" Content="Archive" HorizontalAlignment="Left" Margin="67,236,0,0" VerticalAlignment="Top" Width="80" IsEnabled="False" Click="btnArchive_Click"/>
+        <Label Content="Search:" Grid.Column="1" HorizontalAlignment="Left" Margin="45,24,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Interested Balance:" Grid.Column="1" HorizontalAlignment="Left" Margin="664,74,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label Name="lblBalance"  Grid.Column="1" HorizontalAlignment="Left" Margin="720,110,0,0" VerticalAlignment="Top" FontStyle="Italic" FontSize="15" FontFamily="Segoe UI Semibold"/>
+        <Button Content="Pass" Grid.Column="1" HorizontalAlignment="Left" Margin="755,312,0,0" VerticalAlignment="Top" Width="60" Click="Button_Click" Height="27"/>
+    </Grid>
+</Window>

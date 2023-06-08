@@ -1,0 +1,34 @@
+﻿<Window x:Class="OOP_Project.PastTransaction"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOP_Project"
+        mc:Ignorable="d"
+        Title="PastTransaction" Height="413.61" Width="643.969" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <ListView Name="lstpsttrans" HorizontalAlignment="Left" Height="281" VerticalAlignment="Top" Width="187" Margin="52,68,0,0" SelectionChanged="lstpsttrans_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding ReceiptNo}">Reciept#</GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="438,328,0,0" VerticalAlignment="Top" Width="75" Click="btnBack_Click"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="281" Margin="280,22,0,0" Stroke="Black" VerticalAlignment="Top" Width="314"/>
+        <Label Name="lblReceipt" Content="Receipt ID" HorizontalAlignment="Left" Margin="513,36,0,0" VerticalAlignment="Top" Height="24" Width="62"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="52,28,0,0" VerticalAlignment="Top" Height="24" Width="42"/>
+        <Label Name="lblName" Content="Name" HorizontalAlignment="Left" Margin="115,28,0,0" VerticalAlignment="Top" Height="24" Width="138"/>
+        <Label Content="Amount:" HorizontalAlignment="Left" Margin="329,89,0,0" VerticalAlignment="Top" Height="24" Width="53"/>
+        <Label Name="lblamnt" Content="Amount" HorizontalAlignment="Left" Margin="403,89,0,0" VerticalAlignment="Top" Height="24" Width="51"/>
+        <Label Name="lblLoanDate" Content="Loan Date" HorizontalAlignment="Left" Margin="483,89,0,0" VerticalAlignment="Top" Width="92" Height="24"/>
+        <Label Content="Interest Rate:" HorizontalAlignment="Left" Margin="305,127,0,0" VerticalAlignment="Top" Height="24" Width="77"/>
+        <Label Name="lblpercent" Content="percentage" HorizontalAlignment="Left" Margin="403,127,0,0" VerticalAlignment="Top" Height="24" Width="68"/>
+        <Label Name="lblDateToday" Content="Date Today" HorizontalAlignment="Left" Margin="297,36,0,0" VerticalAlignment="Top" Height="24" Width="85"/>
+        <Label Content="Total:" HorizontalAlignment="Left" Margin="392,167,0,0" VerticalAlignment="Top" Height="24" Width="36"/>
+        <Label Name="lblTotal" Content="TOTAL" HorizontalAlignment="Left" Margin="403,191,0,0" VerticalAlignment="Top" Width="110" FontSize="20" Height="36"/>
+        <Label Content="Amount Paid:" HorizontalAlignment="Left" Margin="303,249,0,0" VerticalAlignment="Top" Height="24" Width="79"/>
+        <Label Name ="lblAmntPaid" Content="AmountPaid" HorizontalAlignment="Left" Margin="403,249,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
